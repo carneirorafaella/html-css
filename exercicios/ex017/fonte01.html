@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif; 
+        /* 
+         Medidas Absolutas
+        centimetro(cm), melimetro(mm), polegada(in), pixel(px), ponto(pt), paica(pc)
+
+         Medidas Relativas
+        em, ex, rem, vw, vh, %
+
+        16px geralmente é igual a 1em
+
+        1em é o tamanho original de uma fonte, 2em é o dobro do tamanho original da fonte, 0.5em é a metade do tamanho original da fonte
+
+        sempre utilizar px ou em, recomendação oficial da w3c(guanabara recomenda usar em) 
+        */
+        font-size:1em;
+        }
+
+        h1,h2{
+            font-style: italic;
+            font-weight: bold;
+
+        }
+
+        /*
+        peso da fonte: font-weigth
+        exemplos de pesos: lighter; normal; bold; bolder.
+
+        tem também o numerico que vai de 100 em 100, de 100 até 900
+        100-900
+        NEM SEMPRE TODAS AS FONTES TEM ESSAS POSSIBILIDADES
+
+        font-style é uma tag pra deixar em italico ou normal 
+
+        text-decoration tag para o sublinhado
+
+
+        peso:weigth; largura:width; altura:heigth 
+        */
+
+        /*shorthand font
+        
+        - font-style -> font-weigth -> font-size -> font-family 
+
+        ex: font: italic bolder 3em 'Work Sans', sans-serif;
+
+        você pode não colocar algum desses, mas tem que ser nesta ordem 
+
+        ex:bolder 1em 'Work Sans'
+        */
+        
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam exercitationem veritatis impedit. Voluptatum, labore eaque veritatis error id minus ea, nulla eum modi beatae maiores similique repellendus. Asperiores, voluptatum molestias!
+    </p>
+
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sint blanditiis, velit sunt aperiam tenetur amet harum ullam odit, consequatur eos id nisi modi nesciunt similique officiis quaerat accusamus maiores.</p>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+        }
+        
+        header{
+
+            background-color: lightgray;
+            padding:15px;
+            border:10px solid black;
+            margin:10px;
+        }
+
+        nav{
+            background-color: black;
+            padding:4px;
+            width: 450px;
+            box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.853);
+        }
+
+        nav > a {
+            color: rgb(237, 236, 236);
+            font-weight: bold;
+            margin-right: 50px;
+            
+        }
+
+        main{
+            background-color: lightgray;
+            margin:10px;
+            border:10px solid black;
+            padding:15px;
+            border-radius: 14px;
+            box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.838);
+
+        }
+
+        section{
+            background-color: rgb(182, 180, 180);
+            padding:10px;
+        }
+
+        #noticias{
+           
+            margin:3px;
+        }
+
+        #assuntos{
+            margin:3px;
+            padding:20px;
+        }
+
+        article > aside {
+            background-color: rgb(59, 59, 59);
+            color:rgb(182, 180, 180);
+            width: 300px;
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding:7px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        h3{
+            display:inline;
+            margin-right:10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+         <h1>Meu site</h1>
+         <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a> <a href="#">Link</a> <a href="#">Link</a> <a href="#">Link</a>
+         </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+             <h3>Política</h3>
+             <h3>Esportes</h3>
+             <h3>Tecnologia</h3>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In fugiat fugit cupiditate eum magni non amet, dolores accusamus aperiam porro vel ducimus optio excepturi, ullam, aliquid neque delectus similique repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat repellendus ipsa inventore reprehenderit, odit voluptatibus, architecto officiis veniam, velit odio eum? Quo vitae sunt iure officiis est iste soluta odio?</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Rafaella</p>
+    </footer>
+</body>
+</html>

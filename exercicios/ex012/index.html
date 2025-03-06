@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body> <!--explicação-->
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+
+
+    <!--comandos pra por videos, com varios tipos de video para compatibilizar com varios navegadores-->
+<video controls width="500" poster="imagens/capa.png">
+
+    <source src="midia/Meu-Video1.M4v.mp4" type="video/m4v">
+    <source src="midia/Meu-Video1.webm.webm" type="video/webm">
+    <source src="midia/meu-video1.mp4.mp4" type="video/mp4">
+
+    <p>Seu navegador não tem compatibilidade com reprodução de Vídeos</p>
+    <!--videos hospedados desta maneira ocupam mto espaço, e pesa no bolso do cliente (hospedagem própria)-->
+</video>
+
+    
+<!--Incorpoção de vídeos externos (recomendado por nos seus sites)-->
+<h1>Iserindo vídeos do YouTube</h1>
+<iframe width="500" height="315" src="https://www.youtube.com/embed/JF9yWvjvCVU?si=OhDF_zt8Goxo9L85" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<!--recomendação do guanabara (vimeo.com) postar seus vídeos com direito a restrição-->
+<h1>Inserindo vídeos do Vimeo</h1>
+<iframe src="https://player.vimeo.com/video/949330127?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="SKATE! (2024) dir. Philippe Berthelet"></iframe>
+</body>
+</html>

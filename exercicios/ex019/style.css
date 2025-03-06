@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* em HTML id = em CSS # (so pode um elemento com o msm nome)
+   tudo que em HTML é class = em CSS é . (varios elementos )
+*/
+
+body{background-color: lightgrey;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    
+    color: rgba(0, 0, 0, 0.864);
+}
+
+h1#principal {text-align: center;
+    background-color:rgba(0, 0, 0, 0.842);
+    color:lightgray;
+}
+
+h2{
+
+}
+
+p{
+   
+   text-indent: 1em; 
+}
+
+.basico{
+    color: gold;
+}
+
+.medio{
+    color: blue;
+}
+
+.avancado{
+    color: red;
+}
+
+.destaque{
+    background-color: rgb(180, 178, 178);
+}
