@@ -13,12 +13,24 @@
 <body>
     <h1>Meu primeiro formulário</h1>
 
-   <form action="cadastro.php">
-        <p>Nome: 
-            <input type="text" name="Nome" id="Nome"> </p>
-        <p>Sobrenome: 
-            <input type="text" name="Sobrenome" id="Sobrenome"> </p>
+   <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="inome">Nome:</label> 
+            <input type="text" name="Nome" id="inome"> </p>
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="Sobrenome" id="isobrenome"> </p>
         <p><input type="submit" value="Enviar"></p>
    </form>
+   <!--
+   NAME: mais util para html e php
+   Id: mais util para javascript e label
+   SEMPRE UTILIZAR LABEL
+
+
+   method
+   01: GET padrao do navegador
+   (quando vc não for usar algo muito intimo, quando quer copiar a url e compartilhar, so pode enviar ate 3mil bytes/3mil letras, nao pode usar quando for enviar fotos no seu site)
+   02: POST esconde os dados da url
+   -->
+   
 </body>
 </html>
