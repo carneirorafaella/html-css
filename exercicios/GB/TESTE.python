@@ -1,0 +1,106 @@
+# ============================================================
+# Sistema de Venda de Toras - Empresa Y
+# Autor: Gabriel Vargas
+# ============================================================
+
+# 1️⃣ Mensagem de boas-vindas (EXIGÊNCIA DE CÓDIGO 1 de 7)
+print("Bem-vindo ao sistema de vendas da Empresa Y!")
+print("Desenvolvido por: Gabriel Vargas\n")
+
+# ============================================================
+# 2️⃣ Função escolha_tipo() (EXIGÊNCIA DE CÓDIGO 2 de 7)
+# Pergunta o tipo de madeira e retorna o valor do m³
+# ============================================================
+def escolha_tipo():
+precos = {
+"PIN": 150.40, # Pinho
+"PER": 170.20, # Peroba
+"MOG": 190.90, # Mogno
+"IPE": 210.10, # Ipê
+"IMB": 220.70 # Imbuia
+}
+
+while True:
+tipo = input("Digite o tipo de madeira (PIN, PER, MOG, IPE, IMB): ").strip().upper()
+if tipo in precos:
+return precos[tipo]
+else:
+print("❌ Opção inválida! Tente novamente com: PIN, PER, MOG, IPE ou IMB.\n")
+
+# ============================================================
+# 3️⃣ Função qtd_toras() (EXIGÊNCIA DE CÓDIGO 3 de 7)
+# Pergunta a quantidade, retorna quantidade e desconto
+# ============================================================
+def qtd_toras():
+while True:
+try:
+qtd = float(input("Digite a quantidade de toras (em m³): "))
+
+if qtd < 0:
+print("❌ Quantidade não pode ser negativa!\n")
+continue
+if qtd > 2000:
+print("❌ Quantidade acima do limite (máximo 2000 m³). Tente novamente.\n")
+continue
+
+# Definindo desconto conforme regras
+if qtd < 100:
+desconto = 0
+elif qtd < 500:
+desconto = 0.04
+elif qtd < 1000:
+desconto = 0.09
+else: # entre 1000 e 2000
+desconto = 0.16
+
+return qtd, desconto
+
+except ValueError:
+print("❌ Valor inválido! Digite um número válido.\n")
+
+# ============================================================
+# 4️⃣ Função transporte() (EXIGÊNCIA DE CÓDIGO 4 de 7)
+# Pergunta o tipo de transporte e retorna o valor
+# ============================================================
+def transporte():
+while True:
+print("\nEscolha o tipo de transporte:")
+print("1 - Rodoviário (R$1000)")
+print("2 - Ferroviário (R$2000)")
+print("3 - Hidroviário (R$2500)")
+opcao = input("Digite sua opção (1, 2 ou 3): ").strip()
+
+if opcao == "1":
+return 1000
+elif opcao == "2":
+return 2000
+elif opcao == "3":
+return 2500
+else:
+print("❌ Opção inválida! Escolha 1, 2 ou 3.\n")
+
+# ============================================================
+# 5️⃣ e 6️⃣ Código principal (main) + try/except
+# Cálculo do total conforme fórmula do enunciado
+# ============================================================
+try:
+valor_madeira = escolha_tipo()
+qtd, desconto = qtd_toras()
+valor_transporte = transporte()
+
+# Cálculo final
+total = ((valor_madeira * qtd) * (1 - desconto)) + valor_transporte
+
+# ============================================================
+# 7️⃣ Exibição dos resultados
+# ============================================================
+print("\n=========== RESUMO DO PEDIDO ===========")
+print(f"Preço da madeira por m³: R${valor_madeira:.2f}")
+print(f"Quantidade de toras: {qtd} m³")
+print(f"Desconto aplicado: {desconto * 100:.1f}%")
+print(f"Valor do transporte: R${valor_transporte:.2f}")
+print(f"💰 Total a pagar: R${total:.2f}")
+print("=========================================")
+
+except Exception as erro:
+print("⚠️ Ocorreu um erro inesperado:", erro)
